@@ -19,14 +19,13 @@ class SignupScreen extends StatelessWidget {
             const RStackIconText(
               text: "Create Your Account",
             ),
-            
             const RSignUpForm(),
             RSignupGoogleLoginWithDivider(
               onPressed: () => controller.signUpUser(),
               elevatedButtonText: "Sign Up",
               text: "Already have an account?",
               buttonText: "Log in",
-              textButtonOnPressed: () => Get.to(() => const LoginScreen()),
+              textButtonOnPressed: () => Get.offAll(() => const LoginScreen()),
             ),
           ],
         ),

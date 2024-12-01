@@ -12,4 +12,5 @@ class LoginController extends GetxController {
 
   void loginUser() {
   }
+  
 }

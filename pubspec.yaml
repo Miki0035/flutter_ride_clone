@@ -22,7 +22,7 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.14.1
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
 
@@ -52,3 +52,12 @@ flutter:
           weight: 600
         - asset: assets/fonts/PlusJakartaSans-Bold.ttf
           weight: 800
+
+# fluttter launcher icon related
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon-512.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/icon-512.png"
+  remove_alpha_ios: true

@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
               elevatedButtonText: "Log in",
               text: "Don't have an account? ",
               buttonText: "Sign up",
-              textButtonOnPressed: () => Get.to(() => const SignupScreen()),
+              textButtonOnPressed: () => Get.offAll(() => const SignupScreen()),
             ),
           ],
         ),
