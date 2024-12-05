@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/features/signup/controllers/signup_controller.dart';
+import 'package:ride_clone/utils/validators/validator.dart';
 
 class RSignUpForm extends StatelessWidget {
   const RSignUpForm({
@@ -19,6 +20,8 @@ class RSignUpForm extends StatelessWidget {
             // User name
             TextFormField(
               controller: controller.username,
+              validator: (value) =>
+                  RValidator.validateEmptyText("username", value),
               decoration: const InputDecoration(
                 prefixIcon: Icon(
                   Icons.person_outline_rounded,
@@ -34,6 +37,8 @@ class RSignUpForm extends StatelessWidget {
             // Email
             TextFormField(
               controller: controller.email,
+              validator: (value) =>
+                  RValidator.validateEmail(value),
               decoration: const InputDecoration(
                 prefixIcon: Icon(
                   Icons.email_outlined,
@@ -51,6 +56,8 @@ class RSignUpForm extends StatelessWidget {
             Obx(
               () => TextFormField(
                 controller: controller.password,
+                validator: (value) =>
+                    RValidator.validatePassword(value),
                 obscureText: controller.hidePassword.value,
                 decoration: InputDecoration(
                   prefixIcon: const Icon(

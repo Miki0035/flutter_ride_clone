@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ride_clone/utils/themes/custom_themes/appbar_theme.dart';
+import 'package:ride_clone/utils/themes/custom_themes/dialog_theme.dart';
 import 'package:ride_clone/utils/themes/custom_themes/text_field_theme.dart';
 
 class RAppTheme {
@@ -10,5 +11,6 @@ class RAppTheme {
       fontFamily: 'PlusJakartaSans',
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: RAppBarTheme.lightAppBarTheme,
+      dialogTheme: RDialogTheme.lightDialogTheme,
       inputDecorationTheme: RTextFieldTheme.lightInputDecorationTheme);
 }

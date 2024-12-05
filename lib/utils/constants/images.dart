@@ -15,6 +15,8 @@ class RImages {
 
   // Icons
   static const String google = "assets/icons/google.png";
+  static const String out = "assets/icons/out.png";
+
   
 
 
