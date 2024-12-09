@@ -12,6 +12,11 @@ class RColors {
   static const Color darkGrey = Color(0xFF333333);
   static const Color lightBlue = Color(0xFFF6F8FA);
 
+  static const Color lightGrey = Color(0xFFF6F8FA);
+
+
+
+
 
 
 

@@ -13,11 +13,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const RAppBar(
-        title: Text(
-          "Your Profile",
-          style: TextStyle(
-              fontWeight: FontWeight.w800, fontSize: RSizes.fontSizeLg * 1.3),
-        ),
+        title: "Your Profile",
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -33,9 +29,8 @@ class ProfileScreen extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: RColors.white,
-                  borderRadius: BorderRadius.circular(14.0)
-                ),
+                    color: RColors.white,
+                    borderRadius: BorderRadius.circular(14.0)),
                 child: const Column(
                   children: [
                     RProfileTextFeild(
