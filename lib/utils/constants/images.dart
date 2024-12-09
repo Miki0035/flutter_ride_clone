@@ -10,6 +10,7 @@ class RImages {
   static const String onboarding3 = "assets/images/onboarding3.png";
 
   static const String signupCar = "assets/images/signup-car.png";
+  static const String profileImage = "assets/images/profile-image.png";
 
   // Icons
   static const String google = "assets/icons/google.png";

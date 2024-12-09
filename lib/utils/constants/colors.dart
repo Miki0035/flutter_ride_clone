@@ -10,6 +10,10 @@ class RColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color green = Color(0xFF0CC25F);
   static const Color darkGrey = Color(0xFF333333);
+  static const Color lightBlue = Color(0xFFF6F8FA);
+
+
+
 
   static const Color textFormFeildFill = Color(0xFFF6F8FA);
 }

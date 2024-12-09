@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ride_clone/features/bottom_navigation_menu.dart';
 import 'package:ride_clone/features/onboarding/screens/onboarding.dart';
 import 'package:ride_clone/utils/themes/theme.dart';
 
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: RAppTheme.lightTheme,
-      home: OnBoardingScreen(),
+      // home: OnBoardingScreen(),
+      home: const RBottomNavigationScreen(),
     );
   }
 }
