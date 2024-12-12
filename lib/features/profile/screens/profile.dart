@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ride_clone/common/widgets/appbar/appbar.dart';
 import 'package:ride_clone/common/widgets/containers/circular_container_with_image.dart';
-import 'package:ride_clone/features/profile/screens/widgets/profile_edit_textfield.dart';
+import 'package:ride_clone/features/profile/screens/widgets/custom_textfield_with_label_and_value.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/images.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';

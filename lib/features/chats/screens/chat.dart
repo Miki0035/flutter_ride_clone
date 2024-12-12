@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/common/widgets/appbar/appbar.dart';
-import 'package:ride_clone/common/widgets/buttons/back_button_icon.dart';
+import 'package:ride_clone/common/widgets/buttons/button_with_image_icon.dart';
 import 'package:ride_clone/features/login/screens/login.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/images.dart';
@@ -16,7 +16,8 @@ class ChatScreen extends StatelessWidget {
       appBar: RAppBar(
         title: "Chat List",
         actions: [
-          RBackButton(
+          RButtonImage(
+            image: RImages.out,
             onPressed: () => Get.offAll(() => const LoginScreen()),
           )
         ],

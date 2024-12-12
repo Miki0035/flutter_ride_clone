@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart';
+import 'package:ride_clone/common/widgets/flutter_map.dart';
 import 'package:ride_clone/utils/constants/images.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 
@@ -11,28 +10,19 @@ class RHorizontalContainerTwoColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(
           flex: 1,
-          child: SizedBox(
-            width: 100.00,
+          child: RFlutterMap(
             height: 100.00,
-            child: FlutterMap(
-              options: const MapOptions(
-                  initialCenter: LatLng(51, -0.09), initialZoom: 13),
-              children: [
-                TileLayer(
-                  urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                ),
-              ],
-            ),
+            width: 100.00,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           width: 12.0,
         ),
-        const Expanded(
+        Expanded(
             flex: 3,
             child: Column(
               children: [
@@ -63,7 +53,7 @@ class RHorizontalContainerTwoColumn extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image(
-                      image: AssetImage(RImages.location),
+                      image: AssetImage(RImages.point),
                       width: 32.0,
                       height: 32.0,
                     ),

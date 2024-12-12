@@ -12,6 +12,9 @@ class RImages {
   static const String signupCar = "assets/images/signup-car.png";
   static const String profileImage = "assets/images/profile-image.png";
 
+  static const String blackCar = "assets/images/black-car.png";
+  static const String rider = "assets/images/rider";
+
   // Icons
   static const String google = "assets/icons/google.png";
   static const String out = "assets/icons/out.png";
@@ -20,8 +23,14 @@ class RImages {
   static const String chat = "assets/icons/chat.png";
   static const String profile = "assets/icons/profile.png";
   static const String downArrow = "assets/icons/arrow-down.png";
-  static const String location = "assets/icons/point.png";
   static const String to = "assets/icons/to.png";
   static const String search = "assets/icons/search.png";
+  static const String backArrow = "assets/icons/back-arrow.png";
+  static const String point = "assets/icons/point.png";
+  static const String target = "assets/icons/target.png";
+  static const String map = "assets/icons/map.png";
+  static const String star = "assets/icons/star.png";
+  static const String dollar = "assets/icons/dollar.png";
+  static const String close = "assets/icons/close.png";
 
 }
