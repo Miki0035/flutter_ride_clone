@@ -5,6 +5,7 @@ import 'package:ride_clone/features/bottom_navigation_menu.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 import 'package:ride_clone/utils/device/device_utility.dart';
+import 'package:ride_clone/utils/popups/full_screen_loader.dart';
 
 class RModalImageTitleSubtitle extends StatelessWidget {
   const RModalImageTitleSubtitle({
@@ -12,11 +13,18 @@ class RModalImageTitleSubtitle extends StatelessWidget {
     required this.image,
     required this.title,
     required this.subtitle,
+    required this.firstButtonText,
+    required this.showSecondButton,
+    required this.firstButtonOnPress,
   });
 
   final String title;
   final String subtitle;
   final String image;
+  final String firstButtonText;
+  final bool showSecondButton;
+
+  final VoidCallback firstButtonOnPress;
 
   @override
   Widget build(BuildContext context) {
@@ -62,9 +70,24 @@ class RModalImageTitleSubtitle extends StatelessWidget {
             const SizedBox(
               height: 12.0,
             ),
+            !showSecondButton
+                // when there is only one button like sign up confirmation
+                ? RButton(
+                    onPressed: () => Get.offAll(() => firstButtonOnPress),
+                    text: firstButtonText)
+                :
+                // when there is two button like ride confirmation screen
+
+                RButton(onPressed: firstButtonOnPress, text: firstButtonText),
+
             RButton(
-                onPressed: () => Get.offAll(() =>  const RBottomNavigationScreen()),
-                text: 'Browse Home')
+                backgroundColor: RColors.veryLightGrey,
+                color: RColors.black,
+                onPressed: () {
+                  RFullScreenLoader.stopLoading();
+                  Get.offAll(() => const RBottomNavigationScreen());
+                },
+                text: "Back Home")
           ],
         ),
       ),

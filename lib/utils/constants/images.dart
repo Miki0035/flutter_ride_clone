@@ -13,7 +13,10 @@ class RImages {
   static const String profileImage = "assets/images/profile-image.png";
 
   static const String blackCar = "assets/images/black-car.png";
-  static const String rider = "assets/images/rider";
+  static const String rider0 = "assets/images/rider0.png";
+  static const String rider1 = "assets/images/rider1.png";
+  static const String rider2 = "assets/images/rider2.png";
+  static const String rider3 = "assets/images/rider3.png";
 
   // Icons
   static const String google = "assets/icons/google.png";
@@ -32,5 +35,4 @@ class RImages {
   static const String star = "assets/icons/star.png";
   static const String dollar = "assets/icons/dollar.png";
   static const String close = "assets/icons/close.png";
-
 }

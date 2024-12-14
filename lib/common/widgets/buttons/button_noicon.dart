@@ -7,10 +7,13 @@ class RButton extends StatelessWidget {
     required this.onPressed,
     required this.text, 
     this.backgroundColor = RColors.blue,
+    this.color = RColors.white,
     this.elevation = 0
   });
   final Color backgroundColor;
-  final VoidCallback onPressed;
+  final Color color;
+
+  final VoidCallback? onPressed;
   final String text;
   final double elevation;
 
@@ -18,19 +21,18 @@ class RButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.only(top: 24.0),
       padding: const EdgeInsets.all(12.0),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(14.0),
           elevation: elevation,
-          backgroundColor: RColors.blue,
+          backgroundColor: backgroundColor,
         ),
         child: Text(
           text,
-          style: const TextStyle(
-              color: RColors.white,
+          style:  TextStyle(
+              color: color,
               fontSize: 18.0,
               fontWeight: FontWeight.bold),
         ),

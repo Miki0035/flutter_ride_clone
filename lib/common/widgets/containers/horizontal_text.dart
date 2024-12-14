@@ -7,9 +7,17 @@ class RHorizontalText extends StatelessWidget {
     super.key,
     required this.label,
     required this.value,
+    this.lableColor = RColors.grey,
+    this.valueColor = RColors.black,
+    this.lableFontSize = RSizes.fontSizeLg,
+    this.valueFontSize = RSizes.fontSizeLg,
   });
   final String label;
   final String value;
+  final Color lableColor;
+  final double lableFontSize;
+  final double valueFontSize;
+  final Color valueColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,16 +27,17 @@ class RHorizontalText extends StatelessWidget {
         children: [
           Text(
             label,
-            style: const TextStyle(
-              color: RColors.grey,
-                fontWeight: FontWeight.w600, fontSize: RSizes.fontSizeLg),
+            style: TextStyle(
+                color: lableColor,
+                fontWeight: FontWeight.w600,
+                fontSize: lableFontSize),
           ),
           Text(
             value,
-            style: const TextStyle(
-              fontSize: RSizes.fontSizeLg,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(
+                fontSize: valueFontSize,
+                fontWeight: FontWeight.bold,
+                color: valueColor),
           ),
         ],
       ),

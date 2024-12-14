@@ -21,7 +21,7 @@ class RRiderListView extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.separated(
-              itemCount: 4,
+              itemCount: controller.drivers.length,
               separatorBuilder: (_, index) => const SizedBox(
                 height: 0.0,
               ),
@@ -33,27 +33,30 @@ class RRiderListView extends StatelessWidget {
                       border: const Border(
                           bottom: BorderSide(
                               color: RColors.veryLightGrey, width: 1.0)),
-                      color: controller.selectedRide.value == index
+                      color: controller.selectedDriverIndex.value == index
                           ? RColors.brightBlue
                           : RColors.white),
                   child: ListTile(
-                    selected: index == controller.selectedRide.value,
+                    selected: index == controller.selectedDriverIndex.value,
                     selectedTileColor: RColors.green,
 
-                    onTap: () => controller.selectedRide.value = index,
+                    onTap: () => controller.selectedDriverIndex.value = index,
                     leading: RCircularImage(
-                      image: "${RImages.rider}$index.png",
+                      image: controller.drivers[index].profilePicture,
                       radius: 24.0,
                     ),
 
                     // Rider Name with Rating
-                    title: const RRowTextIcon(),
+                    title: RRowTextIcon(
+                      driverName: controller.drivers[index].fullName,
+                      ratings: controller.drivers[index].rating,
+                    ),
 
                     // price , time, seats
-                    subtitle: const RRowPriceTimeSeat(
-                      price: "60",
-                      time: "10",
-                      seats: "4",
+                    subtitle: RRowPriceTimeSeat(
+                      price: controller.drivers[index].price,
+                      time: controller.drivers[index].pickupTime,
+                      seats: controller.drivers[index].carSeats,
                     ),
                     trailing: Transform.flip(
                       flipX: true,
@@ -67,7 +70,13 @@ class RRiderListView extends StatelessWidget {
               ),
             ),
           ),
-          RButton(onPressed: () => controller.currentIndex.value++, text: "Select Ride")
+          RButton(
+              onPressed: () => {
+                    controller.selectedDriver.value = controller
+                        .drivers[controller.selectedDriverIndex.value],
+                    controller.currentIndex.value++,
+                  },
+              text: "Select Ride")
         ],
       ),
     );

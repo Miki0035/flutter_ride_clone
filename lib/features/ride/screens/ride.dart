@@ -15,40 +15,55 @@ class RideScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(RideController());
 
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: RAppBar(
-        leading: RButtonImage(
-          image: RImages.backArrow,
-          onPressed: () => Get.back(),
+    return Obx(
+      () => Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: RAppBar(
+          leading: RButtonImage(
+            image: RImages.backArrow,
+            onPressed: () => Get.back(),
+          ),
+          title: controller.currentIndex.value == 0 ? "Ride" : "Choose a Rider",
         ),
-        title: "Ride",
-      ),
-      body: Stack(
-        children: [
-          const RFlutterMap(height: double.infinity),
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 300),
-              top: controller.currentIndex.value == 0
-                  ? RDeviceUtility.getScreenHeight() / 2 - 100
-                  : RDeviceUtility.getScreenHeight() / 2 - 180,
-              right: 12,
-              child: const RButtonImage(
-                width: 60.0,
-                height: 60.0,
-                image: RImages.target,
-                imageColor: RColors.white,
-                buttonBackgroundColor: RColors.green,
-              ),
-            ),
-          )
-        ],
-      ),
-      bottomSheet: Obx(
-        () => Container(
+        body: controller.currentIndex.value != 2
+            ? Stack(
+                children: [
+                  const RFlutterMap(height: double.infinity),
+                  AnimatedPositioned(
+                    duration: const Duration(milliseconds: 300),
+                    top: controller.currentIndex.value == 0
+                        ? RDeviceUtility.getScreenHeight() / 2 - 100
+                        : RDeviceUtility.getScreenHeight() / 2 - 180,
+                    right: 12,
+                    child: const RButtonImage(
+                      width: 60.0,
+                      height: 60.0,
+                      image: RImages.target,
+                      imageColor: RColors.white,
+                      buttonBackgroundColor: RColors.green,
+                    ),
+                  ),
+                ],
+              )
+            : (Stack(
+                children: [
+                  const RFlutterMap(height: double.infinity),
+                  Container(
+                    decoration:
+                        BoxDecoration(color: RColors.grey.withOpacity(0.5)),
+                  )
+                ],
+              )),
+        bottomSheet: AnimatedContainer(
+          duration: const Duration(microseconds: 500),
           width: double.infinity,
-          height: controller.currentIndex.value == 0 ? 350 : 480,
+          height: controller.currentIndex.value == 0
+              ? 350
+              : controller.currentIndex.value == 1
+                  ? 480
+                  : controller.currentIndex.value == 2
+                      ? RDeviceUtility.getScreenHeight() * 0.85
+                      : 480,
           decoration: const BoxDecoration(
               color: RColors.white,
               borderRadius: BorderRadius.only(

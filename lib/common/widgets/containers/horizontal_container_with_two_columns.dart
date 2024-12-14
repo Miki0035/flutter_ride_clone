@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ride_clone/common/widgets/containers/horizontal_row_with_icon_location_text.dart';
 import 'package:ride_clone/common/widgets/flutter_map.dart';
 import 'package:ride_clone/utils/constants/images.dart';
-import 'package:ride_clone/utils/constants/sizes.dart';
 
 class RHorizontalContainerTwoColumn extends StatelessWidget {
   const RHorizontalContainerTwoColumn({
@@ -27,44 +27,18 @@ class RHorizontalContainerTwoColumn extends StatelessWidget {
             child: Column(
               children: [
                 // Point
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image(
-                      image: AssetImage(RImages.to),
-                      width: 32.0,
-                      height: 32.0,
-                    ),
-                    Text(
-                      "1901 Thronridge Cir.Shiloh",
-                      style: TextStyle(
-                          fontSize: RSizes.fontSizeMd,
-                          fontWeight: FontWeight.w600),
-                    )
-                  ],
-                ),
+                RRowWithIconLocationText(
+                    image: RImages.to,
+                    locationName: "1901 Thronridge Cir.Shiloh"),
 
                 SizedBox(
                   height: 8.0,
                 ),
 
                 // Location
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image(
-                      image: AssetImage(RImages.point),
-                      width: 32.0,
-                      height: 32.0,
-                    ),
-                    Text(
-                      "4041 Parker Rd. Allentown",
-                      style: TextStyle(
-                          fontSize: RSizes.fontSizeMd,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ),
+                RRowWithIconLocationText(
+                    image: RImages.point,
+                    locationName: "4041 Parker Rd. Allentown"),
               ],
             ))
       ],

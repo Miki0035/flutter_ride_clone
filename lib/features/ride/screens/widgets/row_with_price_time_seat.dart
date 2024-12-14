@@ -9,7 +9,7 @@ class RRowPriceTimeSeat extends StatelessWidget {
     required this.time,
     required this.seats,
   });
-  final String price;
+  final double price;
   final String time;
   final String seats;
   @override
