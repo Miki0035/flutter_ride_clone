@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 "Your Current Location",
                 style: TextStyle(
-                    fontSize: RSizes.fontSizeLg * 1.2,
+                    fontSize: RSizes.fontSizeLg,
                     fontWeight: FontWeight.w800),
               ),
               const SizedBox(
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 "Recent Rides",
                 style: TextStyle(
-                    fontSize: RSizes.fontSizeLg * 1.2,
+                    fontSize: RSizes.fontSizeLg ,
                     fontWeight: FontWeight.w800),
               ),
               const SizedBox(

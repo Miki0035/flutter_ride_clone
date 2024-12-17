@@ -30,66 +30,65 @@ class RModalImageTitleSubtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(RSizes.defaultSpace),
-      child: Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(
-              image: AssetImage(image),
-              width: RDeviceUtility.getSceenWidth() * 0.35,
-              height: 100.0,
-            ),
-            const SizedBox(
-              height: RSizes.defaultSpace,
-            ),
-            //Title
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontFamily: "PlusJakartaSans",
-                  decoration: TextDecoration.none,
-                  color: RColors.black,
-                  fontWeight: FontWeight.w800,
-                  fontSize: RSizes.fontSizeLg * 1.5),
-            ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            // Subtitle
-            Text(
-              subtitle,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  color: RColors.grey,
-                  fontFamily: "PlusJakartaSans",
-                  decoration: TextDecoration.none,
-                  fontSize: RSizes.fontSizeLg,
-                  fontWeight: FontWeight.normal),
-            ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            !showSecondButton
-                // when there is only one button like sign up confirmation
-                ? RButton(
-                    onPressed: () => Get.offAll(() => firstButtonOnPress),
-                    text: firstButtonText)
-                :
-                // when there is two button like ride confirmation screen
-
-                RButton(onPressed: firstButtonOnPress, text: firstButtonText),
-
-            RButton(
-                backgroundColor: RColors.veryLightGrey,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(
+            image: AssetImage(image),
+            width: RDeviceUtility.getSceenWidth() * 0.35,
+            height: 100.0,
+          ),
+          const SizedBox(
+            height: RSizes.defaultSpace,
+          ),
+          //Title
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                fontFamily: "PlusJakartaSans",
+                decoration: TextDecoration.none,
                 color: RColors.black,
-                onPressed: () {
-                  RFullScreenLoader.stopLoading();
-                  Get.offAll(() => const RBottomNavigationScreen());
-                },
-                text: "Back Home")
-          ],
-        ),
+                fontWeight: FontWeight.w800,
+                fontSize: RSizes.fontSizeLg * 1.5),
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          // Subtitle
+          Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                color: RColors.grey,
+                fontFamily: "PlusJakartaSans",
+                decoration: TextDecoration.none,
+                fontSize: RSizes.fontSizeLg,
+                fontWeight: FontWeight.normal),
+          ),
+          const SizedBox(
+            height: 12.0,
+          ),
+          !showSecondButton
+              // when there is only one button like sign up confirmation
+              ? RButton(onPressed: firstButtonOnPress, text: firstButtonText)
+              :
+              // when there is two button like ride confirmation screen
+              Column(
+                  children: [
+                    RButton(
+                        onPressed: firstButtonOnPress, text: firstButtonText),
+                    RButton(
+                        backgroundColor: RColors.veryLightGrey,
+                        color: RColors.black,
+                        onPressed: () {
+                          RFullScreenLoader.stopLoading();
+                          Get.offAll(() => const RBottomNavigationScreen());
+                        },
+                        text: "Back Home")
+                  ],
+                ),
+        ],
       ),
     );
   }

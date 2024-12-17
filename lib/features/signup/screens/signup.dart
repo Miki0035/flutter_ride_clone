@@ -5,6 +5,7 @@ import 'package:ride_clone/common/widgets/containers/stack_with_image_text.dart'
 import 'package:ride_clone/features/login/screens/login.dart';
 import 'package:ride_clone/features/signup/controllers/signup_controller.dart';
 import 'package:ride_clone/features/signup/screens/widgets/sign_up_form.dart';
+import 'package:ride_clone/utils/constants/sizes.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -20,6 +21,9 @@ class SignupScreen extends StatelessWidget {
               text: "Create Your Account",
             ),
             const RSignUpForm(),
+            const SizedBox(
+              height: RSizes.spaceBtwSections,
+            ),
             RSignupGoogleLoginWithDivider(
               onPressed: () => controller.signUpUser(),
               elevatedButtonText: "Sign Up",

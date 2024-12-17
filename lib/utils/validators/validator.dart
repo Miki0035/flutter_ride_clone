@@ -22,7 +22,7 @@ class RValidator {
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Passowrd is required';
+      return 'Password is required';
     }
 
     if (value.length < 6) {

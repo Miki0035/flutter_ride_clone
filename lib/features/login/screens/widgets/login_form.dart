@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/features/login/controller/login_controller.dart';
+import 'package:ride_clone/utils/constants/sizes.dart';
+import 'package:ride_clone/utils/validators/validator.dart';
 
 class RLoginForm extends StatelessWidget {
   const RLoginForm({
@@ -11,7 +13,7 @@ class RLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = LoginController.instance;
     return Form(
-      key: controller.signUpForm,
+      key: controller.loginFormKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -19,10 +21,11 @@ class RLoginForm extends StatelessWidget {
             // Email
             TextFormField(
               controller: controller.email,
+              validator: (value) => RValidator.validateEmail(value),
               decoration: const InputDecoration(
                 prefixIcon: Icon(
                   Icons.email_outlined,
-                  size: 28.0,
+                  size: RSizes.iconMd,
                 ),
                 hintText: 'example@gmail.com',
                 labelText: "Email",
@@ -36,11 +39,12 @@ class RLoginForm extends StatelessWidget {
             Obx(
               () => TextFormField(
                 controller: controller.password,
+                validator: (value) => RValidator.validatePassword(value),
                 obscureText: controller.hidePassword.value,
                 decoration: InputDecoration(
                   prefixIcon: const Icon(
                     Icons.lock_outlined,
-                    size: 28.0,
+                    size: RSizes.iconMd,
                   ),
                   suffixIcon: IconButton(
                     onPressed: () => controller.hidePassword.value =
@@ -49,7 +53,7 @@ class RLoginForm extends StatelessWidget {
                       controller.hidePassword.value
                           ? Icons.visibility_off
                           : Icons.visibility,
-                      size: 28.0,
+                      size:  RSizes.iconMd,
                     ),
                   ),
                   hintText: 'Enter password',

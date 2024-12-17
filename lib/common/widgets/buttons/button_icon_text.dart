@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ride_clone/utils/constants/sizes.dart';
 
 class RIconTextButton extends StatelessWidget {
   const RIconTextButton({
@@ -36,7 +37,7 @@ class RIconTextButton extends StatelessWidget {
         label: Text(
           text,
           style: TextStyle(
-              color: textColor, fontSize: 18.0, fontWeight: FontWeight.bold),
+              color: textColor, fontSize: RSizes.fontSizeMd, fontWeight: FontWeight.bold),
         ),
       ),
     );

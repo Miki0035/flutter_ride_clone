@@ -9,6 +9,7 @@ class RTextFieldTheme {
     fillColor: RColors.textFormFeildFill,
     prefixIconColor: RColors.grey,
     suffixIconColor: RColors.grey,
+    
     labelStyle: const TextStyle(
         fontSize: 16.0, color: RColors.black, fontWeight: FontWeight.w600),
     hintStyle: const TextStyle(

@@ -9,8 +9,8 @@ class RHorizontalText extends StatelessWidget {
     required this.value,
     this.lableColor = RColors.grey,
     this.valueColor = RColors.black,
-    this.lableFontSize = RSizes.fontSizeLg,
-    this.valueFontSize = RSizes.fontSizeLg,
+    this.lableFontSize = RSizes.fontSizeMd,
+    this.valueFontSize = RSizes.fontSizeMd,
   });
   final String label;
   final String value;

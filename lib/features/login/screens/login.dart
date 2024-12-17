@@ -26,6 +26,9 @@ class LoginScreen extends StatelessWidget {
               height: RSizes.defaultSpace,
             ),
             const RLoginForm(),
+            const SizedBox(
+              height: RSizes.spaceBtwSections,
+            ),
             RSignupGoogleLoginWithDivider(
               onPressed: () => controller.loginUser(),
               elevatedButtonText: "Log in",

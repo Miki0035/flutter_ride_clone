@@ -3,16 +3,15 @@ import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 
 class RHeadLine extends StatelessWidget {
-  const RHeadLine({
-    super.key,
-    required this.image,
-    required this.title,
-    this.colorText = "",
-    this.subtitle="",
-    required this.width,
-    required this.height,
-    this.textAlign = TextAlign.center
-  });
+  const RHeadLine(
+      {super.key,
+      required this.image,
+      required this.title,
+      this.colorText = "",
+      this.subtitle = "",
+      required this.width,
+      required this.height,
+      this.textAlign = TextAlign.center});
 
   final TextAlign textAlign;
 
@@ -51,7 +50,7 @@ class RHeadLine extends StatelessWidget {
                 text: colorText,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize:  RSizes.fontSizeLg * 1.5,
+                  fontSize: RSizes.fontSizeLg * 1.5,
                   color: RColors.blue,
                 ),
               ),
@@ -65,7 +64,7 @@ class RHeadLine extends StatelessWidget {
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: RSizes.fontSizeMd,
+              fontSize: RSizes.fontSizeSm,
               color: RColors.grey,
             ))
       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
+import 'package:ride_clone/utils/constants/sizes.dart';
 
 class RButton extends StatelessWidget {
   const RButton({
@@ -33,7 +34,7 @@ class RButton extends StatelessWidget {
           text,
           style:  TextStyle(
               color: color,
-              fontSize: 18.0,
+              fontSize: RSizes.fontSizeMd,
               fontWeight: FontWeight.bold),
         ),
       ),

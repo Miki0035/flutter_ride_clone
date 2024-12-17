@@ -51,7 +51,7 @@ class RSignupGoogleLoginWithDivider extends StatelessWidget {
               text,
               style: const TextStyle(
                   color: RColors.grey,
-                  fontSize: 18.0,
+                  fontSize: RSizes.fontSizeMd,
                   fontWeight: FontWeight.w600),
             ),
             TextButton(
@@ -60,7 +60,7 @@ class RSignupGoogleLoginWithDivider extends StatelessWidget {
                 buttonText,
                 style: const TextStyle(
                     color: RColors.blue,
-                    fontSize: 18.0,
+                    fontSize: RSizes.fontSizeMd,
                     fontWeight: FontWeight.bold),
               ),
             ),

@@ -44,12 +44,12 @@ class RProfileTextFeild extends StatelessWidget {
                   Text(
                     value,
                     style: const TextStyle(
-                        fontSize: RSizes.fontSizeLg,
+                        fontSize: RSizes.fontSizeMd,
                         fontWeight: FontWeight.bold),
                   ),
                   const Icon(
                     Icons.edit_square,
-                    size: 32.0,
+                    size: RSizes.iconMd,
                   )
                 ],
               ),

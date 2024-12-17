@@ -27,7 +27,7 @@ class RRowWithIconLocationText extends StatelessWidget {
         Text(
           locationName,
           style: const TextStyle(
-              fontSize: RSizes.fontSizeMd, fontWeight: FontWeight.w600),
+              fontSize: RSizes.fontSizeSm, fontWeight: FontWeight.w600),
         )
       ],
     );
