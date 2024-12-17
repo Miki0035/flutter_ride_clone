@@ -27,7 +27,7 @@ class RTextFieldTheme {
       borderSide: const BorderSide(width: 1, color: Colors.red),
     ),
     errorStyle: const TextStyle(
-        fontSize: 16.0, color: Colors.red, fontWeight: FontWeight.w600),
+        fontSize: 12.0, color: Colors.red, fontWeight: FontWeight.w600),
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(26),
       borderSide: const BorderSide(width: 1, color: Colors.red),
