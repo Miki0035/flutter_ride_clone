@@ -1,6 +1,6 @@
 # Ride Mobile App
 
-![login screen](./assets/readme_images/login_screen.png)
+![login screen](./assets/images/login_screen.png)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter"/>
