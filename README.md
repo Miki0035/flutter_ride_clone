@@ -23,7 +23,7 @@
 
 ## <a name="welcome"> 👋 Welcome </a>
 
-Thanks for checking out this flutter mobile app. This was originally suppose to be built with [React Native](https://reactnative.dev/) from one of JavaScript Mastery Youtube channel [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) (Shout out to Adrian 😃 ), but I decided to build the mobile app using [Flutter] (https://flutter.dev/). Please check it out 😮 and let me know what you think.
+Thanks for checking out this flutter mobile app. This was originally suppose to be built with [React Native](https://reactnative.dev/) from one of JavaScript Mastery Youtube channel [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) (Shout out to Adrian 😃 ), but I decided to build the mobile app using [Flutter](https://flutter.dev/). Please check it out 😮 and let me know what you think.
 
 ## <a name="tech-stack">⚙️ Tech Stack </a>
 
