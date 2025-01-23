@@ -1,6 +1,10 @@
 # Ride Mobile App
 
+<div align="center">
+
 ![login screen](./assets/images/login_screen.png)
+
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter"/>
@@ -46,7 +50,6 @@ Thanks for checking out this flutter mobile app. This was originally suppose to 
 ❗❗ **_No Authentication_**
 
 ❗❗ **_No Real Time Location_**
-
 
 ## <a name="quick-start"> 🤸 Quick Start </a>
 
