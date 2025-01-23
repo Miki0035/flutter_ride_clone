@@ -17,32 +17,36 @@ class RRiderInformationContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = RideController.instance;
-    return Container(
-      width: RDeviceUtility.getSceenWidth(),
-      decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(24.0),
-            topRight: Radius.circular(24.0),
-          ),
-          color: RColors.white),
-      child: Column(children: [
-        // Ride Info headline
-        const RHorizontalRideInfoTextWithButton(),
-        const RCircularRiderImageWithRating(),
-        const RRiderPriceTimeSeat(),
-        const RToFromLocationRiderInfo(),
-        RButton(
-            onPressed: () => RFullScreenLoader.openConfirmationDialog(
-                    "Booking Placed successfully",
-                    "Thank you for your booking! Your reservation has been successfully placed. Please proceed with your trip",
-                    "Go Track",
-                    true,
-                    0.7, () {
-                  RFullScreenLoader.stopLoading();
-                  controller.currentIndex.value++;
-                }),
-            text: "Confirm Ride")
-      ]),
+    return Expanded(
+      child: Container(
+        width: RDeviceUtility.getSceenWidth(),
+        decoration: const BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(24.0),
+              topRight: Radius.circular(24.0),
+            ),
+            color: RColors.white),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            // Ride Info headline
+            const RHorizontalRideInfoTextWithButton(),
+            const RCircularRiderImageWithRating(),
+            const RRiderPriceTimeSeat(),
+            const RToFromLocationRiderInfo(),
+            RButton(
+                onPressed: () => RFullScreenLoader.openConfirmationDialog(
+                        "Booking Placed successfully",
+                        "Thank you for your booking! Your reservation has been successfully placed. Please proceed with your trip",
+                        "Go Track",
+                        true,
+                        0.7, () {
+                      RFullScreenLoader.stopLoading();
+                      controller.currentIndex.value++;
+                    }),
+                text: "Confirm Ride")
+          ]),
+        ),
+      ),
     );
   }
 }
