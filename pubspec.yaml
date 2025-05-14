@@ -27,6 +27,7 @@ dependencies:
   firebase_core: ^3.13.0
   cloud_firestore: ^5.6.7
   lottie: ^3.3.1
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -43,6 +44,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/animations/
+    - .env
 
   # Local Fonts
   fonts:

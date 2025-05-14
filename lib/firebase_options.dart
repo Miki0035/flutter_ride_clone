@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -49,20 +50,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC3HYAvWcXD3_7WosPfu1wVD3vfWzgSH7A',
-    appId: '1:918224786787:android:e2afc1e65da120e865ef56',
-    messagingSenderId: '918224786787',
-    projectId: 'flutter-ride-df197',
-    storageBucket: 'flutter-ride-df197.firebasestorage.app',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env["ANDROID_API_KEY"] ?? "",
+    appId: dotenv.env["ANDROID_APP_ID"] ?? "",
+    messagingSenderId: dotenv.env["ANDROID_MESSAGING_SENDER_ID"] ?? "",
+    projectId: dotenv.env["ANDROID_PROJECT_ID"] ?? "",
+    storageBucket: dotenv.env["ANDROID_STORAGE_BUCKET"] ?? "",
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBidSPjwj9Upmw-Zq8aWCy3hxG5RF_4DCs',
-    appId: '1:918224786787:ios:7f118323b5382f3965ef56',
-    messagingSenderId: '918224786787',
-    projectId: 'flutter-ride-df197',
-    storageBucket: 'flutter-ride-df197.firebasestorage.app',
-    iosBundleId: 'com.example.rideClone',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env["IOS_API_KEY"] ?? "",
+    appId: dotenv.env["IOS_APP_ID"] ?? "",
+    messagingSenderId: dotenv.env["IOS_MESSAGING_SENDER_ID"] ?? "",
+    projectId: dotenv.env["IOS_PROOJECT_ID"] ?? "",
+    storageBucket: dotenv.env["IOS_STORAGE_BUCKET"] ?? "",
+    iosBundleId: dotenv.env["IOS_BUNDLE_ID"] ?? "",
   );
 }

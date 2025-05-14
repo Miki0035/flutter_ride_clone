@@ -8,10 +8,13 @@ import 'package:ride_clone/app.dart';
 import 'package:ride_clone/data/authentication_repository.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 void main() async {
   final WidgetsBinding widgetsBinding =
       WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
 
   // Init Get Storage
   await GetStorage.init();
