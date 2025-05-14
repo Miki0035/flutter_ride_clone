@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ride_clone/features/onboarding/screens/onboarding.dart';
 import 'package:ride_clone/utils/themes/theme.dart';
+import 'features/authentication/screens/onboarding/screens/onboarding.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       theme: RAppTheme.lightTheme,
       home: OnBoardingScreen(),
     );

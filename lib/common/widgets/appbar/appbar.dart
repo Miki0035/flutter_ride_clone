@@ -23,7 +23,7 @@ class RAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: Text(
           title,
           style: const TextStyle(
-              fontWeight: FontWeight.w800, fontSize: RSizes.fontSizeLg * 1.3),
+              fontWeight: FontWeight.w800, fontSize: RSizes.fontSizeLg ),
         ),
         automaticallyImplyLeading: showBackArrow,
         actions: actions,

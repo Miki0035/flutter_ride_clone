@@ -35,4 +35,8 @@ class RImages {
   static const String star = "assets/icons/star.png";
   static const String dollar = "assets/icons/dollar.png";
   static const String close = "assets/icons/close.png";
+
+  // Animations
+  static const String loaderAnimation =
+      "assets/animations/loading-animation.json";
 }
