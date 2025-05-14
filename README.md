@@ -39,9 +39,8 @@ check it out 😮 and let me know what you think.
 
 👉 **On Boarding Screen**: visually appealing on boarding screen
 
-👉 **On Authentication **: This app has Firebase Authentication enabled, allowing users to securely
-sign in and manage their accounts using email/password, phone number, or third-party providers like
-Google or Facebook.
+👉 **On Authentication**: allowing users to securely sign in and manage their accounts using
+email/password
 
 👉 **Login and Sign Screen**: sign up and login screen
 
