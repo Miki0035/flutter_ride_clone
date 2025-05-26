@@ -23,7 +23,11 @@
 
 ## <a name="welcome"> 👋 Welcome </a>
 
-Thanks for checking out this flutter mobile app. This was originally suppose to be built with [React Native](https://reactnative.dev/) from one of JavaScript Mastery Youtube channel [JavaScript Mastery](https://www.youtube.com/watch?v=kmy_YNhl0mw&t=13465s) (Shout out to Adrian 😃 ), but I decided to build the mobile app using [Flutter](https://flutter.dev/). Please check it out 😮 and let me know what you think.
+Thanks for checking out this flutter mobile app. This was originally suppose to be built
+with [React Native](https://reactnative.dev/) from one of JavaScript Mastery Youtube
+channel [JavaScript Mastery](https://www.youtube.com/watch?v=kmy_YNhl0mw&t=13465s) (Shout out to
+Adrian 😃 ), but I decided to build the mobile app using [Flutter](https://flutter.dev/). Please
+check it out 😮 and let me know what you think.
 
 ## <a name="tech-stack">⚙️ Tech Stack </a>
 
@@ -35,19 +39,19 @@ Thanks for checking out this flutter mobile app. This was originally suppose to 
 
 👉 **On Boarding Screen**: visually appealing on boarding screen
 
+👉 **On Authentication**: allowing users to securely sign in and manage their accounts using
+email/password
+
 👉 **Login and Sign Screen**: sign up and login screen
 
 👉 **Input Validation**: Comprehensive email and password validation
 
 👉 **Gesture Controlled Map**: has google like map called flutter map
 
-👉 **Destination ,Rider Selection and Rider detail screen**: has an interchanining related ride selection screens
+👉 **Destination ,Rider Selection and Rider detail screen**: has an interchanining related ride
+selection screens
 
 ## <a name="doesnt-have"> ☹️ Doesn't Have </a>
-
-❗❗ **_No Backend What-so-ever_**
-
-❗❗ **_No Authentication_**
 
 ❗❗ **_No Real Time Location_**
 
@@ -98,4 +102,5 @@ flutter run
 ## <a name="more"> 🚀 More </a>
 
 - For email login and sign up uses real email address
-- For Password use strong password that contain more than 6 characters , at least one uppercase , at least one number and one special characters
+- For Password use strong password that contain more than 6 characters , at least one uppercase , at
+  least one number and one special characters

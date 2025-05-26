@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ride_clone/common/widgets/appbar/appbar.dart';
 import 'package:ride_clone/common/widgets/containers/circular_container_with_image.dart';
+import 'package:ride_clone/features/authentication/controllers/user_controller.dart';
 import 'package:ride_clone/features/profile/screens/widgets/custom_textfield_with_label_and_value.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/images.dart';
@@ -11,6 +12,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: const RAppBar(
         title: "Your Profile",
@@ -31,28 +33,28 @@ class ProfileScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: RColors.white,
                     borderRadius: BorderRadius.circular(14.0)),
-                child: const Column(
+                child:  Column(
                   children: [
                     RProfileTextFeild(
-                      labelText: "First Name",
-                      value: "Martin",
+                      labelText: "User Name",
+                      value: controller.user.value.username,
                     ),
-                    RProfileTextFeild(
-                      labelText: "Last Name",
-                      value: "JS Mastery",
-                    ),
+                    // RProfileTextFeild(
+                    //   labelText: "Last Name",
+                    //   value: "JS Mastery",
+                    // ),
                     RProfileTextFeild(
                       labelText: "Email",
-                      value: "maring@gmail.com",
+                      value: controller.user.value.email,
                     ),
-                    RProfileTextFeild(
+                    const RProfileTextFeild(
                       labelText: "Email Status",
-                      value: "status",
+                      value: "verified",
                     ),
-                    RProfileTextFeild(
-                      labelText: "Phone Number",
-                      value: "+554423435",
-                    ),
+                    // RProfileTextFeild(
+                    //   labelText: "Phone Number",
+                    //   value: "+554423435",
+                    // ),
                   ],
                 ),
               )

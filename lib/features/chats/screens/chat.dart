@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/common/widgets/appbar/appbar.dart';
 import 'package:ride_clone/common/widgets/buttons/button_with_image_icon.dart';
-import 'package:ride_clone/features/login/screens/login.dart';
 import 'package:ride_clone/utils/constants/colors.dart';
 import 'package:ride_clone/utils/constants/images.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 import 'package:ride_clone/utils/device/device_utility.dart';
+
+import '../../authentication/screens/login/screens/login.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

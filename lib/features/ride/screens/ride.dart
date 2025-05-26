@@ -50,7 +50,7 @@ class RideScreen extends StatelessWidget {
                   const RFlutterMap(height: double.infinity),
                   Container(
                     decoration:
-                        BoxDecoration(color: RColors.grey.withOpacity(0.5)),
+                        BoxDecoration(color: RColors.grey.withValues(alpha: 0.5)),
                   )
                 ],
               )),

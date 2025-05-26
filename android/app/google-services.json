@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918224786787",
+    "project_id": "flutter-ride-df197",
+    "storage_bucket": "flutter-ride-df197.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918224786787:android:e2afc1e65da120e865ef56",
+        "android_client_info": {
+          "package_name": "com.example.ride_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3HYAvWcXD3_7WosPfu1wVD3vfWzgSH7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
