@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/data/authentication_repository.dart';
 import 'package:ride_clone/features/authentication/models/user_model.dart';

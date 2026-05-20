@@ -24,8 +24,6 @@ class AuthenticationRepository extends GetxController {
   }
 
   screenRedirect() async {
-    print(deviceStorage.read("IsFirstTime"));
-
     final user = _auth.currentUser;
     if (user != null) {
       Get.offAll(() => const RBottomNavigationScreen());
