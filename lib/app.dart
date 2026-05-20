@@ -8,8 +8,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      debugShowCheckedModeBanner: true,
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: RAppTheme.lightTheme,
       home: OnBoardingScreen(),
     );

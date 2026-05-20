@@ -21,7 +21,6 @@ class AuthenticationRepository extends GetxController {
     FlutterNativeSplash.remove();
     screenRedirect();
     super.onReady();
-
   }
 
   screenRedirect() async {
@@ -29,9 +28,9 @@ class AuthenticationRepository extends GetxController {
 
     final user = _auth.currentUser;
     if (user != null) {
-      if (!user.emailVerified) {
-        Get.offAll(() => const RBottomNavigationScreen());
-      }
+      Get.offAll(() => const RBottomNavigationScreen());
+      // if (!user.emailVerified) {
+      // }
       // else {
       //   Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
       // }
@@ -44,8 +43,8 @@ class AuthenticationRepository extends GetxController {
   }
 
   // EMAIL & PASSWORD SIGN-IN
-  Future<UserCredential> loginWithEmailAndPassword(String email,
-      String password) async {
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
     try {
       return await _auth.signInWithEmailAndPassword(
           email: email, password: password);
@@ -55,8 +54,8 @@ class AuthenticationRepository extends GetxController {
   }
 
   // SIGN-UP WITH EMAIL, USERNAME , PASSWORD
-  Future<UserCredential> signUpWithUserNameEmailPassword(String email,
-      String username, String password) async {
+  Future<UserCredential> signUpWithUserNameEmailPassword(
+      String email, String username, String password) async {
     try {
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);

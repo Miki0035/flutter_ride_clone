@@ -1,4 +1,4 @@
-
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/data/user_repository.dart';
 import 'package:ride_clone/features/authentication/models/user_model.dart';
@@ -11,17 +11,16 @@ class UserController extends GetxController {
 
   @override
   void onInit() async {
-    await fetchUserRecord();
     super.onInit();
+    await fetchUserRecord();
   }
 
   Future<void> fetchUserRecord() async {
     try {
       final user = await userRepository.fetchUser();
-      this.user(user);
+      this.user.value = user;
     } catch (e) {
       user(UserModel.empty());
     }
   }
-
 }

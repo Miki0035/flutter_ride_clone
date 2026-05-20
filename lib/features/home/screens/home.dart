@@ -12,12 +12,12 @@ import 'package:ride_clone/utils/constants/images.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final controller = Get.put(UserController());
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UserController());
-
     return Scaffold(
       appBar:
           RAppBar(title: "Welcome ${controller.user.value.username}", actions: [

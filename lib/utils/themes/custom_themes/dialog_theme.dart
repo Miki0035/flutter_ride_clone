@@ -6,7 +6,7 @@ class RDialogTheme {
   RDialogTheme._();
 
   // light mode
-  static const lightDialogTheme = DialogTheme(
+  static const lightDialogTheme = DialogThemeData(
       elevation: 0,
       titleTextStyle: TextStyle(
           fontFamily: 'PlusJakartaSans',

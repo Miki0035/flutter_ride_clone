@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:ride_clone/data/authentication_repository.dart';
 import 'package:ride_clone/features/authentication/models/user_model.dart';
@@ -21,11 +22,13 @@ class UserRepository extends GetxController {
   // RETRIEVE USER FROM CLOUD STORE
   Future<UserModel> fetchUser() async {
     try {
-      final documentSnapshot = await _db.collection("users")
+      final documentSnapshot = await _db
+          .collection("users")
           .doc(AuthenticationRepository.instance.authUser?.uid)
           .get();
       if (documentSnapshot.exists) {
-        return UserModel.fromSnapShot(documentSnapshot);
+        final user = UserModel.fromSnapShot(documentSnapshot);
+        return user;
       } else {
         return UserModel.empty();
       }

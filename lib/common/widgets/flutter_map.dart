@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
-
 class RFlutterMap extends StatelessWidget {
   const RFlutterMap({
-    super.key, required this.height,  this.width = double.infinity,
+    super.key,
+    required this.height,
+    this.width = double.infinity,
   });
 
   final double height;
@@ -17,12 +18,13 @@ class RFlutterMap extends StatelessWidget {
       width: width,
       height: height,
       child: FlutterMap(
-        options: const MapOptions(
-            initialCenter: LatLng(51, -0.09), initialZoom: 13),
+        mapController: MapController(),
+        options:
+            const MapOptions(initialCenter: LatLng(51, -0.09), initialZoom: 13),
         children: [
           TileLayer(
-            urlTemplate:
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            userAgentPackageName: 'com.android.application',
           ),
         ],
       ),

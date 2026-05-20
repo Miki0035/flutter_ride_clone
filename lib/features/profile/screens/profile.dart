@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
 import 'package:ride_clone/common/widgets/appbar/appbar.dart';
 import 'package:ride_clone/common/widgets/containers/circular_container_with_image.dart';
 import 'package:ride_clone/features/authentication/controllers/user_controller.dart';
@@ -8,11 +9,12 @@ import 'package:ride_clone/utils/constants/images.dart';
 import 'package:ride_clone/utils/constants/sizes.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  ProfileScreen({super.key});
+
+  final controller = UserController.instance;
 
   @override
   Widget build(BuildContext context) {
-    final controller = UserController.instance;
     return Scaffold(
       appBar: const RAppBar(
         title: "Your Profile",
@@ -33,7 +35,7 @@ class ProfileScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: RColors.white,
                     borderRadius: BorderRadius.circular(14.0)),
-                child:  Column(
+                child: Column(
                   children: [
                     RProfileTextFeild(
                       labelText: "User Name",

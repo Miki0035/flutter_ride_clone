@@ -33,7 +33,7 @@ class RideController extends GetxController {
     DriverModel(
         id: "2",
         firstName: "Leslie",
-        lastName: "Alexander",
+        lastName: "Alex",
         rating: 5,
         profilePicture: RImages.rider2,
         price: 70.00,

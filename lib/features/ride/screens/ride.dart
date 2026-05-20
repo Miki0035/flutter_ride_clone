@@ -49,34 +49,36 @@ class RideScreen extends StatelessWidget {
                 children: [
                   const RFlutterMap(height: double.infinity),
                   Container(
-                    decoration:
-                        BoxDecoration(color: RColors.grey.withValues(alpha: 0.5)),
+                    decoration: BoxDecoration(
+                        color: RColors.grey.withValues(alpha: 0.5)),
                   )
                 ],
               )),
-        bottomSheet: AnimatedContainer(
-          duration: const Duration(microseconds: 500),
-          width: double.infinity,
-          height: controller.currentIndex.value == 0
-              ? 350
-              : controller.currentIndex.value == 1
-                  ? 480
-                  : controller.currentIndex.value == 2
-                      ? RDeviceUtility.getScreenHeight() * 0.85
-                      : 480,
-          decoration: const BoxDecoration(
-              color: RColors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(18.0),
-                topRight: Radius.circular(18.0),
-              )),
-          child: Padding(
-            padding: controller.currentIndex.value == 0
-                ? const EdgeInsets.all(24.0)
-                : const EdgeInsets.symmetric(vertical: 12.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [controller.screens[controller.currentIndex.value]],
+        bottomSheet: SafeArea(
+          child: AnimatedContainer(
+            duration: const Duration(microseconds: 500),
+            width: double.infinity,
+            height: controller.currentIndex.value == 0
+                ? 350
+                : controller.currentIndex.value == 1
+                    ? 500
+                    : controller.currentIndex.value == 2
+                        ? RDeviceUtility.getScreenHeight() * 0.85
+                        : 480,
+            decoration: const BoxDecoration(
+                color: RColors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(18.0),
+                  topRight: Radius.circular(18.0),
+                )),
+            child: Padding(
+              padding: controller.currentIndex.value == 0
+                  ? const EdgeInsets.all(24.0)
+                  : const EdgeInsets.symmetric(vertical: 12.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [controller.screens[controller.currentIndex.value]],
+              ),
             ),
           ),
         ),

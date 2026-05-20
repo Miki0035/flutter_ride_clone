@@ -70,13 +70,16 @@ class RRiderListView extends StatelessWidget {
               ),
             ),
           ),
-          RButton(
-              onPressed: () => {
-                    controller.selectedDriver.value = controller
-                        .drivers[controller.selectedDriverIndex.value],
-                    controller.currentIndex.value++,
-                  },
-              text: "Select Ride")
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: RButton(
+                onPressed: () => {
+                      controller.selectedDriver.value = controller
+                          .drivers[controller.selectedDriverIndex.value],
+                      controller.currentIndex.value++,
+                    },
+                text: "Select Ride"),
+          )
         ],
       ),
     );
